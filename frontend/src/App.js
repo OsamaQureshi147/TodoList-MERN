@@ -114,7 +114,7 @@ function App() {
                 isCompleted: false
               })}
             />
-            <Icon type='button' onClick={onClick}>
+            <Icon type='button' color='primary' onClick={onClick}>
               add_circle
             </Icon>
           </form>

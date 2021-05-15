@@ -12,10 +12,9 @@ export default function TodoItems({ todoList, removeTodo, finishTodo }) {
               style={{ textDecoration: name.isCompleted ? 'line-through' : '' }}
             >
               {name.item}
-              <span className='todo-btn'>
-                <Icon type='button' onClick={() => removeTodo(index)}>delete</Icon>
-                <Icon type='button' onClick={() => finishTodo(index)}>done</Icon>
-              </span>
+
+              <Icon className='icon__button' color='secondary' type='button' onClick={() => removeTodo(index)}>delete</Icon>
+              <Icon className='icon__button' type='button' onClick={() => finishTodo(index)}>done</Icon>
             </li>
           );
         })}
