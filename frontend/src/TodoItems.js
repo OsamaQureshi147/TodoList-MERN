@@ -4,15 +4,22 @@ import './App.css'
 
 export default function TodoItems({ todoList, removeTodo, finishTodo }) {
   return (
-    <div>
+    <div className='table'>
       {
         todoList.map((name, index) => {
           return (
-            <tr key={index}>
+            <tr className='table__row' key={index}>
               <td
-                style={{ textDecoration: name.isCompleted ? 'line-through' : '' }}
+                style={{
+                  textDecoration: name.isCompleted ? 'line-through' : '',
+                  flex: 0.85
+                }}
               >{name.item}</td>
-              <td>
+              <td
+                style={{
+                  flex: 0.15
+                }}
+              >
                 <Icon className='icon__button' color='secondary' type='button' onClick={() => removeTodo(index)}>delete</Icon>
                 <Icon className='icon__button' type='button' onClick={() => finishTodo(index)}>done</Icon>
               </td>
@@ -20,7 +27,6 @@ export default function TodoItems({ todoList, removeTodo, finishTodo }) {
           );
         })
       }
-
     </div>
   );
 }

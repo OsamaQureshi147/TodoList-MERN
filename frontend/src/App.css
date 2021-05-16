@@ -51,7 +51,6 @@ li {
 
 .input__container {
   background-color: cornsilk;
-  width: 500px;
   display: flex;
   flex-direction: row;
   height: 50px;
@@ -62,14 +61,39 @@ li {
 }
 
 .items__container {
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 500px;
+}
+
+@media (max-width: 450px) {
+  .items__container {
+    justify-content: space-between;
+    margin-top: 10px;
+    width: 400px;
+  }
+}
+
+.table {
+  margin-top: 20px;
+  overflow: scroll;
+  height: 600px;
+  color: rgb(59, 54, 54);
+}
+
+.table tr {
   display: flex;
   justify-content: space-between;
 }
 
-.todo__list {
-  width: 500px;
-  background-color: darkcyan;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+.table td {
+  padding: 0.5rem;
+}
+
+.table tr:nth-of-type(odd) {
+  background-color: lightgray;
+}
+
+.table tr:hover {
+  background-color: rgb(166, 160, 243);
 }
