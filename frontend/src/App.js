@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import TodoItems from './TodoItems';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Icon from '@material-ui/core/Icon';
+import { Card, CardContent } from '@material-ui/core';
 
 
 function App() {
@@ -102,8 +102,8 @@ function App() {
 
       <div className='body__todo'>
 
-        <div className='card'>
-          <form onSubmit={onClick}>
+        <div className='input__container'>
+          <form className='form__container' onSubmit={onClick}>
             <input
               autoFocus
               placeholder='Add ToDo items'
@@ -114,14 +114,19 @@ function App() {
                 isCompleted: false
               })}
             />
-            <Icon type='button' color='primary' onClick={onClick}>
+            <Icon className='icon__button' type='button' color='primary' onClick={onClick}>
               add_circle
             </Icon>
           </form>
-          <div className='card-body'>
-            <TodoItems todoList={todoList} removeTodo={removeTodo} finishTodo={finishTodo} />
-          </div>
         </div>
+
+        <Card className='items__container'>
+          <CardContent>
+            <h3>Todos</h3>
+            <TodoItems todoList={todoList} removeTodo={removeTodo} finishTodo={finishTodo} />
+          </CardContent>
+        </Card>
+
       </div>
 
 

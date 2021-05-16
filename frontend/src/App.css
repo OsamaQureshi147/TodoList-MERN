@@ -10,22 +10,22 @@ li {
   list-style-type: none;
 }
 
+.app__container {
+  display: flex;
+  flex-direction: column;
+}
+
 .header__todo {
   background-color: rgb(162, 190, 190);
   color: rgb(50, 53, 54);
   font-family: "Times New Roman";
   display: flex;
-  direction: flex;
   align-items: center;
   justify-content: center;
 }
 
 .header__todo > h1 {
   padding: 10px 0;
-}
-
-.body__todo {
-  background-color: rgb(224, 228, 220);
 }
 
 .input__todo {
@@ -39,4 +39,37 @@ li {
 .icon__button:hover {
   color: rgb(0, 147, 245);
   cursor: pointer;
+}
+
+.body__todo {
+  background-color: #f0e7e7;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input__container {
+  background-color: cornsilk;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+}
+
+.form__container {
+  display: flex;
+}
+
+.items__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo__list {
+  width: 500px;
+  background-color: darkcyan;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
