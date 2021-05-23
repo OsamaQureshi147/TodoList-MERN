@@ -70,7 +70,7 @@ li {
   .items__container {
     justify-content: space-between;
     margin-top: 10px;
-    width: 400px;
+    max-width: 400px;
   }
 }
 
